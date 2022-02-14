@@ -121,3 +121,17 @@ Here's an example JSON object including different parameter types:
 `/api/dashboards/<dashboard_id>`
 + POST: Edit an existing dashboard object.
 
+### Alerts
+
+`/api/alerts`
++ GET: Returns a paginated array of alert objects, that the user has access to.
+    id: integer
+    name: string
+    query_id: integer
+    user_id: integer
+    options: dict #!#
+    state: string ["UNKNOWN_STATE", "OK_STATE", "TRIGGERED_STATE"]
+    last_triggered_at: datetime
+	updated_at: datetime
+    created_at: datetime
+    rearm:integer
